@@ -12,43 +12,46 @@
 </head>
 <body>
     <h1 class="w-full text-center text-xl font-bold">Cadastro</h1>
-<form action="" method="post">
-
+<form class="max-w-md m-auto" action="{{route('salva-usuario')}}" method="post">
+ 
+@csrf
 
 <div class="form-control">
           <label class="label">
             <span class="label-text">Usuario</span>
           </label>
-          <input type="text" placeholder="Usuario" class="input input-bordered" required />
+          <input name="usuario" type="text" placeholder="Usuario" class="input input-bordered" required />
         </div>
 
         <div class="form-control">
           <label class="label">
             <span class="label-text">Nome</span>
           </label>
-          <input type="text" placeholder="Nome" class="input input-bordered" required />
+          <input name="nome" type="text" placeholder="Nome" class="input input-bordered" required />
         </div>
 
         <div class="form-control">
           <label class="label">
             <span class="label-text">Bio</span>
           </label>
-          <input type="text" placeholder="Bio" class="input input-bordered" required />
+          <input name="bio" type="text" placeholder="Bio" class="input input-bordered" required />
         </div>
 
         <div class="form-control">
           <label class="label">
             <span class="label-text">Email</span>
           </label>
-          <input type="text" placeholder="Email" class="input input-bordered" required />
+          <input name="email" type="text" placeholder="Email" class="input input-bordered" required />
         </div>
 
         <div class="form-control">
           <label class="label">
             <span class="label-text">Senha</span>
           </label>
-          <input type="text" placeholder="Senha" class="input input-bordered" required />
+          <input name="senha" type="text" placeholder="Senha" class="input input-bordered" required />
         </div>
+
+<button class="btn btn-success">Salvar</button>
 
 
 
